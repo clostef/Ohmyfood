@@ -1,4 +1,4 @@
-* {
+p,h2,h4,h5{
     font-family:'Roboto',sans-serif;
 }
 
@@ -9,7 +9,6 @@ body {
 
 .main-container{
     max-width: 375px;
-    box-sizing: border-box;
 }
 
 .logo{
@@ -19,6 +18,7 @@ body {
     gap: 10px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 .logo_o{
     display: flex;
@@ -111,6 +111,8 @@ h3{
 .btn-txt{
     color: #FFFFFF;
     font-size: 16px;
+    position: relative;
+    bottom: 2px;
 }
 
 .function{
@@ -140,24 +142,45 @@ h3{
     margin-bottom: 25px;
 }
 
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 13px;
+    position: relative;
+    left: -12px;
+    background: #9356DC;
+    color: #FFFF;
+}
+
+.n-1{
+    font-size: 12px;
+}
+
 .cell-i{
     color: #7E7E7E;
+    padding-right: 15px;
 }
 
 .cell-i-last{
     color:#9356DC;
+    padding-right: 15px;
 }
 
 .cell-txt{
-    padding-right: 30px;
+    padding-right: 70px;
 }
 
 .cell-txt-2{
-    padding-right: 50px;
+    padding-right: 88px;
 }
 
 .restaurant{
     background-color: #F7F7F7;
+    height: 1250px;
 }
 
 .restaurant-cards{
@@ -166,8 +189,13 @@ h3{
     padding-bottom: 20px;
 }
 
+a{
+    list-style: none;
+}
+
 .card-r{
     width: 340px;
+    height: 251px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: white;
@@ -184,32 +212,40 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80px;
+    height: 70px;
 }
 
 .card-txt{
     padding-right: 105px;
 }
 
-.card-i{
-    font-size: 25px;
-    padding-right: 10px;
+.card-txt-2{
+    padding-right: 140px;
 }
+
+.c-txt{
+    position: relative;
+    bottom: 14px;
+}
+
+.card-i{
+    font-size: 22px;
+}
+
+
 
 .footer-omf{
     width: 375px;
-    height: 186px;
+    height: 175px;
     background-color: #353535;
 }
 
-.logo-title{
-    padding-left: 25px;
-    padding-top: 20px;
-    margin-bottom: 10px;
-}
+
 
 .logo-omf{
     width: 90px;
+    padding-left: 25px;
+    padding-top: 20px;
 }
 
 .footer-i-txt-1{
@@ -227,28 +263,146 @@ h3{
 
 .footer-i-1{
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     padding-right: 11px;
 }
 
 .footer-i-2{
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 12px;
     padding-right: 6px;
 }
 
 .footer-txt{
-    font-size: 15px;
+    font-size: 16px;
     color: #FFFFFF  ;
 }
 
 .footer-txt-2{
-    font-size: 13px;
+    font-size: 14px;
     color: #FFFFFF;
+}
+
+.footer-txt-3{
+    font-size: 14px;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 5px;
 }
 
 .footer-icons-txt{
     padding-left: 25px;
+    padding-top: 15px;
 }
 
+/* Pages restaurant */
+
+.logo_o-1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-head-p{
+    width: 375px;
+    object-fit: cover;
+}
+
+.part-menu{
+    width: 375px;
+    height: 1200px;
+    background-color: #F7F7F7;
+    border-radius: 45px 45px 0px 0px;
+    position: relative;
+    top: -45px;
+}
+
+.title-restaurant{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15px;
+    margin-bottom: 42px;
+}
+
+.title-rest-txt{
+    font-size: 22px;
+    padding-right: 70px;
+}
+
+.icon-rest{
+    font-size: 24px;
+    padding-right: 25px
+}
+
+.main-title{
+    padding-left: 13px;
+}
+
+.border-title{
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    position: relative;
+    bottom: 10px;
+
+}
+
+.plats-cel{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.cellule-plat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 349px;
+    height: 69px;
+    background-color: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.cell-p-txt{
+    padding-left: 15px;
+}
+
+.price-cell{
+    padding-right: 15px;
+    position: relative;
+    top: 14px;
+}
+
+.title-cell{
+    position: relative;
+    top: 8px;
+    font-size: 18px;
+}
+
+.txt-cell{
+    position: relative;
+    bottom: 11px;
+    font-size: 15.0431px;
+}
+
+.main-title-2{
+    margin-top: 40px;
+    padding-left: 13px;
+}
+
+.button-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-2{
+    width: 186px;
+    height: 50px;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
 
