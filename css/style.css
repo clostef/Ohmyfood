@@ -1,4 +1,4 @@
-p,h2,h4,h5{
+*{
     font-family:'Roboto',sans-serif;
 }
 
@@ -58,14 +58,6 @@ body {
     font-size: 17px;
 }
 
-h2{
-    font-size: 24px;
-}
-
-h3{
-    font-size: 18px;
-}
-
 .text{
     background-color: #F3F3F3;
 }
@@ -96,23 +88,25 @@ h3{
 .button-1{
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     padding-top: 15px;
 }
 
 .btn-1{
+    border: 10px;
     width: 218px;
     height: 50px;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-}
+    &:hover{
+        filter: brightness(120%);
+    }
+}   
 
 .btn-txt{
     color: #FFFFFF;
     font-size: 16px;
-    position: relative;
-    bottom: 2px;
 }
 
 .function{
@@ -123,6 +117,13 @@ h3{
     padding-left: 17px;
     padding-top: 20px;
     padding-bottom: 10px;
+}
+
+.title-section-2{
+    padding-left: 17px;
+    padding-top: 20px;
+    position: relative;
+    top: 30px;
 }
 
 .function-cel{
@@ -163,6 +164,7 @@ h3{
 .cell-i{
     color: #7E7E7E;
     padding-right: 15px;
+    font-size: larger;
 }
 
 .cell-i-last{
@@ -180,7 +182,7 @@ h3{
 
 .restaurant{
     background-color: #F7F7F7;
-    height: 1250px;
+    height: 1275px;
 }
 
 .restaurant-cards{
@@ -189,8 +191,24 @@ h3{
     padding-bottom: 20px;
 }
 
-a{
-    list-style: none;
+.new{
+    width: 80px;
+    height: 29px;
+    background: #99E2D0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    position: relative;
+    left: 260px;
+    top: 45px;
+}
+
+.new-txt{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 7px;
+    color: #008766;
+    font-size: 14px;
 }
 
 .card-r{
@@ -228,10 +246,13 @@ a{
     bottom: 14px;
 }
 
-.card-i{
+.icon_heart{
     font-size: 22px;
+    &:active + .fa-sharp fa-regular fa-heart{
+    transition-property: all;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    }
 }
-
 
 
 .footer-omf{
@@ -240,12 +261,22 @@ a{
     background-color: #353535;
 }
 
+footer{
+    padding-top: 12px;
+}
 
-
-.logo-omf{
-    width: 90px;
+.logo-title{
     padding-left: 25px;
-    padding-top: 20px;
+    padding-top: 22px;
+    position: relative;
+    bottom: 15px;
+}
+
+.title-footer{
+    font-family: 'Shrikhand';
+    color:#FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .footer-i-txt-1{
@@ -274,7 +305,7 @@ a{
 }
 
 .footer-txt{
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF  ;
 }
 
@@ -292,10 +323,12 @@ a{
 
 .footer-icons-txt{
     padding-left: 25px;
-    padding-top: 15px;
+    position: relative;
+    bottom: 5px;
 }
 
 /* Pages restaurant */
+
 
 .logo_o-1{
     display: flex;
@@ -311,29 +344,48 @@ a{
 
 .part-menu{
     width: 375px;
-    height: 1200px;
+    height: 1170px;
     background-color: #F7F7F7;
     border-radius: 45px 45px 0px 0px;
     position: relative;
-    top: -45px;
+    margin-top: -45px;
 }
 
 .title-restaurant{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 15px;
+    padding-top: 30px;
     margin-bottom: 42px;
 }
 
-.title-rest-txt{
-    font-size: 22px;
-    padding-right: 70px;
+.diner-title{
+    font-family:"Shrikhand";
+    font-size: 28px;
+    
 }
 
-.icon-rest{
+.icon_heart_2{
     font-size: 24px;
-    padding-right: 25px
+    padding-right: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover .fa-solid.fa-heart{
+        display: block;
+    }
+
+    &:hover .fa-regular.fa-heart{
+        display: none;
+    }
+}
+
+.icon_heart_2 .fa-solid.fa-heart{
+    display: none;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .main-title{
@@ -363,10 +415,51 @@ a{
     background-color: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover .plat-checked{
+        display: flex;
+        width: 0;
+        animation: slide-in-left 0.3s linear forwards;
+    }
 }
+
+
+@keyframes slide-in-left {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 60px;
+    }
+  }
+
+  .plat-checked{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    background-color: #99E2D0;
+    border-radius: 0 20px 20px 0;
+    }
+    
+.icon-check{
+        color: #008766;
+        font-size: 23px;
+    }
 
 .cell-p-txt{
     padding-left: 15px;
+    min-width:0;
+}
+
+.cell-p-txt h4,
+.cell-p-txt p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .price-cell{
@@ -399,10 +492,15 @@ a{
 }
 
 .btn-2{
+    border: 10px;
     width: 186px;
     height: 50px;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+    &:hover{
+        filter: brightness(120%);
+    }
 }
+
 
