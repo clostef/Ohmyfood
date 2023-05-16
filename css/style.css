@@ -44,7 +44,6 @@ body {
 
 .location{
     display: flex;
-    width: 375px;
     height: 50px;
     flex-direction: row;
     justify-content: center;
@@ -96,17 +95,23 @@ body {
     border: 10px;
     width: 218px;
     height: 50px;
+    cursor: pointer;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     &:hover{
-        filter: brightness(120%);
+        filter: brightness(105%);
     }
 }   
 
 .btn-txt{
     color: #FFFFFF;
     font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .function{
@@ -246,14 +251,29 @@ body {
     bottom: 14px;
 }
 
-.icon_heart{
-    font-size: 22px;
-    &:active + .fa-sharp fa-regular fa-heart{
-    transition-property: all;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    }
+.icon_heart {
+    font-size: 24px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
-
+  
+  .icon_heart .fa-solid.fa-heart {
+    display: none;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+  .icon_heart:hover .fa-solid.fa-heart,
+  .icon_heart input:checked + label .fa-solid.fa-heart {
+    display: block;
+}
+  
+  .icon_heart:hover .fa-regular.fa-heart,
+  .icon_heart input:checked + label .fa-regular.fa-heart {
+    display: none;
+}
 
 .footer-omf{
     width: 375px;
@@ -342,9 +362,24 @@ footer{
     object-fit: cover;
 }
 
+.img-head-p-2{
+    width: 375px;
+    height: 250px;
+    object-fit: cover;
+}
+
 .part-menu{
     width: 375px;
     height: 1170px;
+    background-color: #F7F7F7;
+    border-radius: 45px 45px 0px 0px;
+    position: relative;
+    margin-top: -45px;
+}
+
+.part-menu-2{
+    width: 375px;
+    height: 1250px;
     background-color: #F7F7F7;
     border-radius: 45px 45px 0px 0px;
     position: relative;
@@ -359,10 +394,13 @@ footer{
     margin-bottom: 42px;
 }
 
-.diner-title{
+.diner-title-txt{
     font-family:"Shrikhand";
     font-size: 28px;
-    
+}
+
+.title-diner-p{
+    padding-right: 50px;
 }
 
 .icon_heart_2{
@@ -370,23 +408,26 @@ footer{
     padding-right: 20px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-
-    &:hover .fa-solid.fa-heart{
-        display: block;
-    }
-
-    &:hover .fa-regular.fa-heart{
-        display: none;
-    }
 }
-
-.icon_heart_2 .fa-solid.fa-heart{
+  
+  .icon_heart_2 .fa-solid.fa-heart {
     display: none;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+  
+  .icon_heart_2:hover .fa-solid.fa-heart,
+  .icon_heart_2 input:checked + label .fa-solid.fa-heart {
+    display: block;
+}
+  
+  .icon_heart_2:hover .fa-regular.fa-heart,
+  .icon_heart_2 input:checked + label .fa-regular.fa-heart {
+    display: none;
+}
+
 
 .main-title{
     padding-left: 13px;
@@ -443,6 +484,11 @@ footer{
     height: 100%;
     background-color: #99E2D0;
     border-radius: 0 20px 20px 0;
+    }
+
+    .price-check{
+        display:flex;
+        height: 100%;
     }
     
 .icon-check{
@@ -504,3 +550,109 @@ footer{
 }
 
 
+@media screen and (min-width: 376px) {
+    .main-container{
+        width: 100%;
+        max-width: none;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .img-head-p {
+        width: 100%;
+        height: 450px;
+    }
+
+    .img-head-p-2{
+        width: 100%;
+        height: 450px;
+    }
+
+    .part-menu{
+        width: 80%;
+        max-width: 1055px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .part-menu-2{
+        width: 80%;
+        max-width: 1055px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title-restaurant{
+        justify-content: center;
+    }
+
+    .title-diner-p{
+        padding-right: 10px;
+    }
+
+    .diner-title-txt {
+        padding-right: 20px;
+    }
+
+    .main-title {
+        padding-left: 13px;
+        width: 634px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-title-2{
+        margin-top: 40px;
+        padding-left: 13px;
+        width: 634px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cellule-plat{
+        width: 634px;
+    }
+
+    .footer-omf{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    footer{
+        padding-top: 12px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .logo-title{
+        padding-top: 0;
+        bottom: 0;
+    }
+
+    .footer-icons-txt {
+        padding-left: 25px;
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        bottom: 0;
+    }
+
+
+    .footer-txt-3 {
+        font-size: 14px;
+        color: #FFFFFF;
+        position: relative;
+        bottom: 0;
+    }
+
+
+
+
+
+
+}
