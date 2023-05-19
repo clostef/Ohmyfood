@@ -69,7 +69,6 @@ body {
 
 .text-h{
     width: 275px;
-    height: 68px;
     padding-top: 10px;
 }
 
@@ -127,8 +126,6 @@ a{
 .title-section-2{
     padding-left: 17px;
     padding-top: 20px;
-    position: relative;
-    top: 30px;
 }
 
 .function-cel{
@@ -187,13 +184,13 @@ a{
 
 .restaurant{
     background-color: #F7F7F7;
-    height: 1275px;
+    height: 1200px;
 }
 
 .restaurant-cards{
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .new{
@@ -202,9 +199,10 @@ a{
     background: #99E2D0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
-    position: relative;
-    left: 260px;
-    top: 45px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 245px;
+    margin-top: 15px;
 }
 
 .new-txt{
@@ -462,7 +460,7 @@ footer{
     &:hover .plat-checked{
         display: flex;
         width: 0;
-        animation: slide-in-left 0.3s linear forwards;
+        animation: slide-in-left 0.2s linear forwards;
     }
 }
 
@@ -492,8 +490,8 @@ footer{
     }
     
 .icon-check{
-        color: #008766;
-        font-size: 23px;
+        color: #FFFF;
+        font-size: 22px;
     }
 
 .cell-p-txt{
@@ -511,7 +509,7 @@ footer{
 .price-cell{
     padding-right: 15px;
     position: relative;
-    top: 14px;
+    top: 25px;
 }
 
 .title-cell{
@@ -560,6 +558,66 @@ footer{
         width: 100%;
     }
 
+    .logo-o{
+        width: 200px;
+    }
+
+    .text-h{
+        width: 687px;
+        font-size: 25px;
+    }
+
+    .text-h-2{
+        width: 531px;
+    }
+
+    .button-1{
+        padding-bottom: 35px;
+    }
+
+    .function{
+        height: 228.38px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title-section{
+        padding-left: 30px;
+    }
+
+    .group-cell{
+       display: flex;
+       align-items: center;
+    }
+
+    .function-cel{
+        padding-left: 40px;
+    }
+    
+    .restaurant{
+        height: fit-content;
+        padding-bottom: 30px;
+    }
+    .title-section-2{
+        max-width: 1085px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-restaurant{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1085px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .restaurant-cards{
+        flex: 50%;
+    }
+
     .img-head-p {
         width: 100%;
         height: 450px;
@@ -571,7 +629,7 @@ footer{
     }
 
     .part-menu{
-        width: 80%;
+        width: 95%;
         max-width: 1055px;
         margin-left: auto;
         margin-right: auto;
@@ -631,7 +689,8 @@ footer{
 
     .logo-title{
         padding-top: 0;
-        bottom: 0;
+        bottom: 15px;
+        padding-right: 50px;
     }
 
     .footer-icons-txt {
@@ -639,20 +698,145 @@ footer{
         position: relative;
         display: flex;
         align-items: baseline;
-        bottom: 0;
+        bottom: 15px;
     }
 
 
     .footer-txt-3 {
-        font-size: 14px;
-        color: #FFFFFF;
         position: relative;
         bottom: 0;
+        padding-right: 40px;
+        padding-left: 15px;
     }
 
+    .footer-txt-2{
+      padding-left: 40px;
+    }
+    
+    .footer-i-txt-2{
+        padding-left: 20px;
+    }
+
+    .footer-txt{
+        padding-left: 5px;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    .card-r{
+        width: 490px;
+    }
+
+    .card-img{
+        width: 490px;
+    }
+
+    .new{
+        position: absolute;
+        z-index: 1;
+        margin-left: 380px;
+        margin-top: 15px; 
+    }
+
+    .card-txt{
+        padding-right: 240px;
+    }
+
+    .card-txt-2{
+        padding-right: 285px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .group-cell{
+        flex-direction: column;
+    }
+    .function{
+        height: fit-content;
+    }
+
+    
+}
+
+@media screen and (max-width: 812px){
+.main-title{
+    width: 100%;
+}
+
+.main-title-2{
+    width: 100%;
+}
+
+.cellule-plat{
+    width:80%
+}
 
 
+.footer-omf{
+    display: block;
+    height: 175px;
+}
 
+footer{
+    display: block;
+    padding-top: 12px;
+    width: 375px;
+}
 
+.logo-title{
+    padding-left: 25px;
+    padding-top: 22px;
+    position: relative;
+    bottom: 15px;
+}
+
+.title-footer{
+    font-family: 'Shrikhand';
+    color:#FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.footer-i-txt-1{
+    padding-left: 0;
+ 
+}
+
+.footer-i-txt-2{
+    padding-left: 0;
+}
+
+.footer-i-1{
+    color: white;
+    font-size: 12px;
+    padding-right: 11px;
+}
+
+.footer-i-2{
+    color: #FFFFFF;
+    font-size: 12px;
+    padding-right: 6px;
+}
+
+.footer-txt{
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.footer-txt-2{
+    padding-left: 0;
+}
+
+.footer-txt-3{
+   padding-left: 0;
+}
+
+.footer-icons-txt{
+    display: block;
+    padding-left: 25px;
+    position: relative;
+    bottom: 5px;
+}
 
 }
