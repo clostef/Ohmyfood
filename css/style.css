@@ -98,12 +98,19 @@ body {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    &:hover{
-        filter: brightness(105%);
-    }
 }   
 
+.btn-1:hover{ 
+    filter: brightness(105%); 
+}
+
 .btn-txt{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-left: 22px;
+}
+
+.btn-txt-2{
     color: #FFFFFF;
     font-size: 16px;
 }
@@ -250,8 +257,8 @@ a{
 }
 
 .icon_heart {
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 24px; 
+    cursor: pointer; 
     -webkit-tap-highlight-color: transparent;
 }
   
@@ -263,15 +270,14 @@ a{
     -webkit-text-fill-color: transparent;
 }
   
-  .icon_heart:hover .fa-solid.fa-heart,
-  .icon_heart input:checked + label .fa-solid.fa-heart {
+  .icon_heart:hover .fa-solid.fa-heart{
     display: block;
 }
   
-  .icon_heart:hover .fa-regular.fa-heart,
-  .icon_heart input:checked + label .fa-regular.fa-heart {
+  .icon_heart:hover .fa-regular.fa-heart{
     display: none;
 }
+
 
 .footer-omf{
     width: 375px;
@@ -408,7 +414,7 @@ footer{
     -webkit-tap-highlight-color: transparent;
 }
   
-  .icon_heart_2 .fa-solid.fa-heart {
+.icon_heart_2 .fa-solid.fa-heart {
     display: none;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
@@ -416,13 +422,11 @@ footer{
     -webkit-text-fill-color: transparent;
 }
   
-  .icon_heart_2:hover .fa-solid.fa-heart,
-  .icon_heart_2 input:checked + label .fa-solid.fa-heart {
+.icon_heart_2:hover .fa-solid.fa-heart{
     display: block;
 }
   
-  .icon_heart_2:hover .fa-regular.fa-heart,
-  .icon_heart_2 input:checked + label .fa-regular.fa-heart {
+.icon_heart_2:hover .fa-regular.fa-heart{
     display: none;
 }
 
@@ -454,17 +458,19 @@ footer{
     background-color: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    &:hover{
-        cursor: pointer;
-    }
-    &:hover .plat-checked{
-        display: flex;
-        width: 0;
-        animation: slide-in-left 0.2s linear forwards;
-    }
 }
 
+.cellule-plat:hover{ 
+   cursor: pointer;
+}
 
+.cellule-plat:hover .plat-checked{ 
+    display: flex; 
+    width: 0; 
+    animation: slide-in-left 0.2s linear forwards; 
+}
+
+    
 @keyframes slide-in-left {
     0% {
       width: 0;
@@ -542,9 +548,10 @@ footer{
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    &:hover{
-        filter: brightness(120%);
-    }
+}
+
+.btn-2:hover{
+    filter: brightness(105%); 
 }
 
 
@@ -573,6 +580,10 @@ footer{
 
     .button-1{
         padding-bottom: 35px;
+    }
+
+    .btn-txt{
+        padding-left: 23px;
     }
 
     .function{
