@@ -7,6 +7,33 @@ body {
     justify-content: center;
 }
 
+.circle{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    border: 10px solid rgba(255,255,255,.1);
+    border-top: 10px solid gray;
+    animation: animate 2.3s linear forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate
+{
+    0%
+    {
+    transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%
+    {
+    transform: translate(-50%,-50%) rotate(360deg);
+    opacity: 0;
+    }
+}
+
 .main-container{
     max-width: 375px;
 }
@@ -18,7 +45,6 @@ body {
     gap: 10px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15);
 }
-
 
 .logo_o{
     display: flex;
@@ -272,12 +298,23 @@ a{
   
   .icon_heart:hover .fa-solid.fa-heart{
     display: block;
+    animation-name: fill-heart;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
   
   .icon_heart:hover .fa-regular.fa-heart{
     display: none;
 }
 
+@keyframes fill-heart {
+    0% {
+      clip-path: inset(100% 0% 0% 0%);
+    }
+    100% {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+}
 
 .footer-omf{
     width: 375px;
@@ -353,6 +390,27 @@ footer{
 
 /* Pages restaurant */
 
+.plats-cel {
+    opacity: 0;
+    animation: fade-in 1.5s forwards;
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .plats-cel:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+  .plats-cel:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .plats-cel:nth-child(1) {
+    animation-delay: 1.5s;
+  }
 
 .logo_o-1{
     display: flex;
@@ -424,12 +482,23 @@ footer{
   
 .icon_heart_2:hover .fa-solid.fa-heart{
     display: block;
+    animation-name: fill-heart;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
   
 .icon_heart_2:hover .fa-regular.fa-heart{
     display: none;
 }
 
+@keyframes fill-heart {
+    0% {
+      clip-path: inset(100% 0% 0% 0%);
+    }
+    100% {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+}
 
 .main-title{
     padding-left: 13px;
@@ -469,7 +538,6 @@ footer{
     width: 0; 
     animation: slide-in-left 0.2s linear forwards; 
 }
-
     
 @keyframes slide-in-left {
     0% {
@@ -478,7 +546,37 @@ footer{
     100% {
       width: 60px;
     }
-  }
+}
+
+.cellule-plat:not(:hover) .plat-checked{ 
+    display: flex; 
+    width: 60px; 
+    animation: slide-out-right 0.2s linear forwards; 
+}
+
+@keyframes slide-out-right { 
+    0% { 
+        width: 60px;
+    } 
+     100% 
+    { 
+        width: 0; 
+    } 
+}
+
+.cellule-plat:not(:hover) .icon-check{ 
+    animation: fade-out 0.2s linear forwards;
+}
+
+@keyframes fade-out { 
+    0% { 
+        opacity: 1;
+    } 
+     100% 
+    { 
+        opacity: 0; 
+    } 
+}
 
   .plat-checked{
     display: none;
