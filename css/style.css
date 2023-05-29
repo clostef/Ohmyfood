@@ -5,6 +5,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .circle{
@@ -19,6 +20,7 @@ body {
     border-top: 10px solid gray;
     animation: animate 2.3s linear forwards;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 @keyframes animate
@@ -35,12 +37,26 @@ body {
 }
 
 .main-container{
-    max-width: 375px;
+    width: 100%;
 }
+
+.loader-blur{
+    filter: blur(10px);
+    animation: fade-in-out-blur 2.3s linear forwards;  
+}
+
+@keyframes fade-in-out-blur {
+    0% {
+      filter: blur(10px);
+    }
+    100% {
+      filter: blur(0);
+    }
+  }
 
 .logo{
     display: flex;
-    width: 375px;
+    width: 100%;
     height: 63px;
     gap: 10px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.15);
@@ -112,8 +128,8 @@ body {
 .button-1{
     display: flex;
     justify-content: center;
-    padding-bottom: 60px;
     padding-top: 15px;
+    padding-bottom: 35px;
 }
 
 .btn-1{
@@ -133,7 +149,7 @@ body {
 .btn-txt{
     color: #FFFFFF;
     font-size: 16px;
-    padding-left: 22px;
+    padding-left: 23px;
 }
 
 .btn-txt-2{
@@ -147,11 +163,19 @@ a{
 }
 
 .function{
-    height: 440px;
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.group-cell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
 .title-section{
-    padding-left: 17px;
     padding-top: 20px;
     padding-bottom: 10px;
 }
@@ -159,6 +183,9 @@ a{
 .title-section-2{
     padding-left: 17px;
     padding-top: 20px;
+    max-width: 1085px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .function-cel{
@@ -170,7 +197,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 322.49px;
+    width: 280px;
     height: 72.38px;
     background-color: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -208,20 +235,22 @@ a{
 }
 
 .cell-txt{
-    padding-right: 70px;
+    padding-right: 36px;
 }
 
 .cell-txt-2{
-    padding-right: 88px;
+    padding-right: 48px;
 }
 
 .restaurant{
     background-color: #F7F7F7;
-    height: 1200px;
+    height: fit-content;
+    padding-bottom: 30px;
 }
 
 .restaurant-cards{
     display: flex;
+    flex: 50%;
     justify-content: center;
     margin-top: 20px;
 }
@@ -234,7 +263,7 @@ a{
     border-radius: 2px;
     position: absolute;
     z-index: 1;
-    margin-left: 245px;
+    margin-left: 215px;
     margin-top: 15px;
 }
 
@@ -248,7 +277,7 @@ a{
 }
 
 .card-r{
-    width: 340px;
+    width: 310px;
     height: 251px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -256,7 +285,7 @@ a{
 }
 
 .card-img{
-    width: 340px;
+    width: 310px;
     height: 180px;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
@@ -420,14 +449,24 @@ footer{
 }
 
 .img-head-p{
-    width: 375px;
     object-fit: cover;
+    width: 100%;
+    height: 450px;
 }
 
 .img-head-p-2{
     width: 375px;
     height: 250px;
     object-fit: cover;
+}
+
+.main-restaurant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1085px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .part-menu{
@@ -458,7 +497,7 @@ footer{
 
 .diner-title-txt{
     font-family:"Shrikhand";
-    font-size: 28px;
+    font-size: 22px;
 }
 
 .title-diner-p{
@@ -502,6 +541,8 @@ footer{
 
 .main-title{
     padding-left: 13px;
+    width: 100%;
+    max-width: 634px;
 }
 
 .border-title{
@@ -522,7 +563,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 349px;
+    width: 80%;
+    max-width: 634px;
     height: 69px;
     background-color: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -631,6 +673,7 @@ footer{
 .main-title-2{
     margin-top: 40px;
     padding-left: 13px;
+    max-width: 634px;
 }
 
 .button-2{
@@ -653,85 +696,7 @@ footer{
 }
 
 
-@media screen and (min-width: 376px) {
-    .main-container{
-        width: 100%;
-        max-width: none;
-    }
-
-    .logo{
-        width: 100%;
-    }
-
-    .logo-o{
-        width: 200px;
-    }
-
-    .text-h{
-        width: 687px;
-        font-size: 25px;
-    }
-
-    .text-h-2{
-        width: 531px;
-    }
-
-    .button-1{
-        padding-bottom: 35px;
-    }
-
-    .btn-txt{
-        padding-left: 23px;
-    }
-
-    .function{
-        height: 228.38px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .title-section{
-        padding-left: 30px;
-    }
-
-    .group-cell{
-       display: flex;
-       align-items: center;
-    }
-
-    .function-cel{
-        padding-left: 40px;
-    }
-    
-    .restaurant{
-        height: fit-content;
-        padding-bottom: 30px;
-    }
-    .title-section-2{
-        max-width: 1085px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .main-restaurant{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 1085px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .restaurant-cards{
-        flex: 50%;
-    }
-
-    .img-head-p {
-        width: 100%;
-        height: 450px;
-    }
-
+@media screen and (min-width: 310px) {
     .img-head-p-2{
         width: 100%;
         height: 450px;
@@ -765,7 +730,6 @@ footer{
 
     .main-title {
         padding-left: 13px;
-        width: 634px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -773,12 +737,8 @@ footer{
     .main-title-2{
         margin-top: 40px;
         padding-left: 13px;
-        width: 634px;
         margin-left: auto;
         margin-right: auto;
-    }
-    .cellule-plat{
-        width: 634px;
     }
 
     .footer-omf{
@@ -789,25 +749,29 @@ footer{
     }
 
     footer{
-        padding-top: 12px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
         padding-bottom: 15px;
+        display: block;
+        padding-top: 12px;
+    }
+
+    .footer-omf{
+        display: block;
+        height: 175px;
     }
 
     .logo-title{
-        padding-top: 0;
-        bottom: 15px;
         padding-right: 50px;
+        padding-left: 25px;
+        padding-top: 22px;
+        position: relative;
+        bottom: 15px;
     }
 
     .footer-icons-txt {
+        display: block;
         padding-left: 25px;
         position: relative;
-        display: flex;
-        align-items: baseline;
-        bottom: 15px;
+        bottom: 5px;
     }
 
 
@@ -815,20 +779,42 @@ footer{
         position: relative;
         bottom: 0;
         padding-right: 40px;
-        padding-left: 15px;
+        padding-left: 0;
     }
 
     .footer-txt-2{
-      padding-left: 40px;
+      padding-left: 0;
     }
     
     .footer-i-txt-2{
-        padding-left: 20px;
+        padding-left: 0;
     }
 
     .footer-txt{
         padding-left: 5px;
+        font-size: 14px;
+        color: #FFFFFF;
     }
+
+
+    
+    .footer-i-txt-1{
+        padding-left: 0;
+     
+    }
+    
+    .footer-i-1{
+        color: white;
+        font-size: 12px;
+        padding-right: 11px;
+    }
+    
+    .footer-i-2{
+        color: #FFFFFF;
+        font-size: 12px;
+        padding-right: 6px;
+    }
+    
 
 }
 
@@ -855,97 +841,55 @@ footer{
     .card-txt-2{
         padding-right: 285px;
     }
+
+    text-h{
+        width: 310px;
+    }
 }
 
-@media screen and (max-width: 1100px){
-    .group-cell{
-        flex-direction: column;
-    }
-    .function{
-        height: fit-content;
+@media screen and (min-width:767px){
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
 
+    .footer-icons-txt {
+        display: flex;
+        align-items: baseline;
+        margin-top: 90px;
+    }
+
+    .footer-i-1{
+        padding-right: 11px;
+    }
     
+    .footer-i-2{
+        padding-left: 10px;
+    }
+
+    .footer-txt-2{
+        padding-right: 6px;
+        padding-left: 30px;
+    }
+    
+    .logo-title {
+        margin-top: 90px;
+    }
 }
 
-@media screen and (max-width: 812px){
-.main-title{
-    width: 100%;
-}
+@media screen and (min-width: 980px){
+    .group-cell{
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
 
-.main-title-2{
-    width: 100%;
-}
-
-.cellule-plat{
-    width:80%
-}
-
-
-.footer-omf{
-    display: block;
-    height: 175px;
-}
-
-footer{
-    display: block;
-    padding-top: 12px;
-    width: 375px;
-}
-
-.logo-title{
-    padding-left: 25px;
-    padding-top: 22px;
-    position: relative;
-    bottom: 15px;
-}
-
-.title-footer{
-    font-family: 'Shrikhand';
-    color:#FFFFFF;
-    font-weight: 400;
-    font-size: 18px;
-}
-
-.footer-i-txt-1{
-    padding-left: 0;
- 
-}
-
-.footer-i-txt-2{
-    padding-left: 0;
-}
-
-.footer-i-1{
-    color: white;
-    font-size: 12px;
-    padding-right: 11px;
-}
-
-.footer-i-2{
-    color: #FFFFFF;
-    font-size: 12px;
-    padding-right: 6px;
-}
-
-.footer-txt{
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-.footer-txt-2{
-    padding-left: 0;
-}
-
-.footer-txt-3{
-   padding-left: 0;
-}
-
-.footer-icons-txt{
-    display: block;
-    padding-left: 25px;
-    position: relative;
-    bottom: 5px;
-}
-
+    .function{
+        height: 228.38px;
+        padding-left: 17px;
+        padding-top: 20px;
+        max-width: 1085px;
+        width: 100%;
+    }
 }
